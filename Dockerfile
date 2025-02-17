@@ -8,7 +8,7 @@ RUN go env -w GOPROXY=https://goproxy.cn,direct
 
 RUN go build -o main main.go
 
-FROM debian:bookworm-slim
+FROM golang:1.21.1
 #RUN set -x && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 #    ca-certificates && \
 #    rm -rf /var/lib/apt/lists/*
