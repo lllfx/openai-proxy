@@ -8,9 +8,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/lllfx/openai-proxy/pkg/adapter"
 	"github.com/pkg/errors"
 	openai "github.com/sashabaranov/go-openai"
-	"github.com/zhu327/gemini-openai-proxy/pkg/adapter"
 	"google.golang.org/api/googleapi"
 )
 

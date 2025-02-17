@@ -1,4 +1,4 @@
-module github.com/zhu327/gemini-openai-proxy
+module github.com/lllfx/openai-proxy
 
 go 1.21.1
 

@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/google/generative-ai-go/genai"
+	"github.com/lllfx/openai-proxy/pkg/util"
 	openai "github.com/sashabaranov/go-openai"
-	"github.com/zhu327/gemini-openai-proxy/pkg/util"
 )
 
 const (

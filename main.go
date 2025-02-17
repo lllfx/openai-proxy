@@ -3,10 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/lllfx/openai-proxy/api"
 
 	"github.com/gin-gonic/gin"
-
-	"github.com/zhu327/gemini-openai-proxy/api"
 )
 
 func main() {
