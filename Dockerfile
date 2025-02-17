@@ -3,6 +3,9 @@ FROM golang:1.21.1 AS builder
 COPY ./ /app
 WORKDIR /app
 
+RUN go env -w GO111MODULE=on
+RUN go env -w GOPROXY=https://goproxy.cn,direct
+
 RUN go build -o main main.go
 RUN chmod +x /app/main
 
