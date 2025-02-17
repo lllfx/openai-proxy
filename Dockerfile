@@ -7,10 +7,12 @@ RUN go env -w GO111MODULE=on
 RUN go env -w GOPROXY=https://goproxy.cn,direct
 
 RUN go build -o main main.go
-RUN chmod +x /app/main
 
 FROM debian:bookworm-slim
-COPY --from=builder /app/main /app
-#RUN apt-get update -y && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/* && update-ca-certificates
+#RUN set -x && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+#    ca-certificates && \
+#    rm -rf /var/lib/apt/lists/*
 
+COPY --from=builder /app/main /app/main
+RUN chmod +x /app/main
 CMD ["/app/main"]
